@@ -10,5 +10,16 @@ import { Component } from "@angular/core";
 
 
 export class Producto{
+    //Definicion de propiedades de la clase
+    public nombre: string;
+    public marca: string;
+    public precio: number; 
 
+    constructor(){
+        this.nombre = "PC PORTATIL";
+        this.marca = "Asus";
+        this.precio = 457; 
+        console.log("se ha cargado el componente de productos!");
+        
+    }
 }
