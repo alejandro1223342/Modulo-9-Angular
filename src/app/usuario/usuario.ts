@@ -7,5 +7,6 @@ import { Component } from '@angular/core';
   styleUrl: './usuario.css',
 })
 export class Usuario {
-
+  web = "https://amazon.com";
+  redirigir = true;
 }
