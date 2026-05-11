@@ -14,3 +14,11 @@ a {
     padding: 15px;
     font-size: 26px; /* Tamaño de letra aumentado cuando redirigir es true */
 }
+
+.aprobado {
+  color: #2e7d32; /* Verde oscuro para mejor legibilidad */
+}
+
+.pendiente {
+  color: #d32f2f; /* Rojo */
+}

@@ -12,3 +12,10 @@
 }
 
 <button (click)="cambiarRedirigir()">Cambiar Enlace</button>
+
+<h2>Lista de prestamos</h2>
+<ul>
+    @for(item of prestamosList; track item.id; let indice = $index){
+    <li>{{indice + 1}}. Monto: ${{item.monto}} Estado: <strong [class.aprobado]="item.estado === 'Aprobado' || item.estado === 'pagado'" [class.pendiente]="item.estado === 'Pendiente' || item.estado === 'pendiente'">{{item.estado}}</strong></li>
+    }
+</ul>
