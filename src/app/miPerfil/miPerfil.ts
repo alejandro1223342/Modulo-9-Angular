@@ -1,8 +1,16 @@
 import { Component } from "@angular/core";
+import { Cuentas } from "../cuentas/cuentas";
+import { Transacciones } from "../transacciones/transacciones";
+import { Prestamos } from "../prestamos/prestamos";
 
 @Component(
     {
         selector: "mi-perfil",
+        imports:[
+            Cuentas,
+            Transacciones,
+            Prestamos
+        ],
         templateUrl: "miPerfil.html",
         styleUrl: "miPerfil.css"
     }
