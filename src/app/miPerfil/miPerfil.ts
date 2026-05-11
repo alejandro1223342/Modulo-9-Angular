@@ -34,4 +34,17 @@ export class miPerfil {
         this.telefono = 123456789;
         console.log("Se cargó el componente de perfil correctamente.")
     }
+    
+    ngDoCheck(){
+        console.log("Componente Actualizado Perfil");
+    }
+    
+    //Metodos de la clase
+    cambiarEdad() {
+        this.edad = 26;
+    }
+    cambiarDireccion() {
+        this.direccion = "Calle Verdadera 456";
+    }
+    
 }

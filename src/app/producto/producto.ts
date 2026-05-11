@@ -37,4 +37,20 @@ export class Producto{
         console.log("se ha cargado el componente de productos!");
         
     }
+
+    ngOnInit(){
+       //Metodo que se ejecuta despues de construir la clase
+        console.log("El componente Producto ha sido cargado");
+    }
+
+    ngDoCheck(){
+        //Metodo que se ejecuta cuando detecta cambios en la clase
+        console.log("El componente Producto ha detectado cambios");
+    }
+
+    cambiarNombre(){
+        this.nombre = "Laptop Asus 177 h";
+        this.marca = "Samsung";
+        this.precio = 250;
+    }
 }
