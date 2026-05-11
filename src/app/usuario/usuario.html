@@ -1,7 +1,7 @@
 <h1>Plantillas en Angular</h1>
 
 <!--Interpolacion-->
-    <p>{{web}}</p>
+<p>{{web}}</p>
 
 <!--Enlace dinamico-->
 <div>
@@ -12,10 +12,20 @@
 
 <!--Directivas de Ngif-->
 
-    @if (redirigir) {
-        <p>El Enlace a {{web}} es correcto</p>
-    } @else {
-        <p>El Enlace a {{web}} es incorrecto</p>
-    }
+@if (redirigir) {
+<p>El Enlace a {{web}} es correcto</p>
+} @else {
+<p>El Enlace a {{web}} es incorrecto</p>
+}
 
 <button (click)="cambiarRedirigir()">Modificar Enlace</button>
+
+<h3>Marcas Autos</h3>
+
+<ul>
+    @for (marca of marcasAutos; track marca.id; let indice = $index, esPar = $even, esImpar = $odd) {
+    <li>{{indice + 1}}. {{marca.marca}} {{esPar ? 'Es Par' : 'Es Impar'}} </li>
+    }@empty {
+    <li>No hay marcas</li>
+    }
+</ul>
