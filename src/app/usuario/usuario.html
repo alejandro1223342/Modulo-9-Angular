@@ -7,3 +7,15 @@
 <div>
     <a [href]="web" [class.existe]="redirigir" target="_blank">Enlace</a>
 </div>
+
+<h2>Estructuras de Control de Flujo</h2>
+
+<!--Directivas de Ngif-->
+
+    @if (redirigir) {
+        <p>El Enlace a {{web}} es correcto</p>
+    } @else {
+        <p>El Enlace a {{web}} es incorrecto</p>
+    }
+
+<button (click)="cambiarRedirigir()">Modificar Enlace</button>

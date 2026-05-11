@@ -1,1 +1,14 @@
-<p>prestamos works!</p>
+<h2>Enlaces en Angular</h2>
+
+<div>
+    <a [href]="web" [class.activo]="redirigir" target="_blank">Enlace</a>
+</div>
+
+<h2>Estructura de control de flujo</h2>
+@if (redirigir) {
+    <p>El enlace funciona correctamente</p>
+} @else {
+    <p>Lo sentimos, este enlace no está disponible.</p>
+}
+
+<button (click)="cambiarRedirigir()">Cambiar Enlace</button>

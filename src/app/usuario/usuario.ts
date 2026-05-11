@@ -8,5 +8,13 @@ import { Component } from '@angular/core';
 })
 export class Usuario {
   web = "https://amazon.com";
-  redirigir = true;
+  redirigir = false;
+
+  cambiarRedirigir() {
+    if (this.redirigir == false) {
+      this.redirigir = true;
+    } else {
+      this.redirigir = false;
+    }
+  }
 }

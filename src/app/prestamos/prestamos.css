@@ -1,0 +1,16 @@
+a {
+    background-color: orange;
+    color: black;
+    padding: 15px;
+    font-size: 16px; 
+    border-radius: 15px; 
+    text-decoration: none; 
+    transition: all 0.3s ease; 
+}
+
+.activo {
+    background-color: blue;
+    color: white;
+    padding: 15px;
+    font-size: 26px; /* Tamaño de letra aumentado cuando redirigir es true */
+}
