@@ -1,3 +1,11 @@
+@defer {
+<mi-producto></mi-producto>
+}
+@placeholder {
+<h1>Cargando producto...</h1>
+}
+
+
 <h1>Plantillas en Angular</h1>
 
 <!--Interpolacion-->
@@ -43,3 +51,18 @@
         <p>No tienes permiso</p>
     }
 }
+
+<h3>Mas cosas de las plantillas de angular</h3>
+
+<ng-container>
+    <h1>
+        Esto es un contenedor de Angular
+    </h1>
+</ng-container>
+
+@let pais = ' Peru';
+
+@let saludo = 'Hola desde'+ pais;
+
+{{saludo}}
+
