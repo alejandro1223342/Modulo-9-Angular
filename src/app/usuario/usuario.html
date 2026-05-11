@@ -29,3 +29,17 @@
     <li>No hay marcas</li>
     }
 </ul>
+
+
+
+@switch (usuario.rol) {
+    @case ('Admin') {
+        <app-ventas></app-ventas>
+    }
+    @case ('User') {
+        <p>Usuario normal</p>
+    }
+    @default {
+        <p>No tienes permiso</p>
+    }
+}

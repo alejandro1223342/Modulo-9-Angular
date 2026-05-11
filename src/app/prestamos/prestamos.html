@@ -6,9 +6,9 @@
 
 <h2>Estructura de control de flujo</h2>
 @if (redirigir) {
-    <p>El enlace funciona correctamente</p>
+<p>El enlace funciona correctamente</p>
 } @else {
-    <p>Lo sentimos, este enlace no está disponible.</p>
+<p>Lo sentimos, este enlace no está disponible.</p>
 }
 
 <button (click)="cambiarRedirigir()">Cambiar Enlace</button>
@@ -16,6 +16,26 @@
 <h2>Lista de prestamos</h2>
 <ul>
     @for(item of prestamosList; track item.id; let indice = $index){
-    <li>{{indice + 1}}. Monto: ${{item.monto}} Estado: <strong [class.aprobado]="item.estado === 'Aprobado' || item.estado === 'pagado'" [class.pendiente]="item.estado === 'Pendiente' || item.estado === 'pendiente'">{{item.estado}}</strong></li>
-    }
+    <li>{{indice + 1}}. Monto: ${{item.monto}} Estado: <strong
+            [class.aprobado]="item.estado === 'Aprobado' || item.estado === 'pagado'"
+            [class.pendiente]="item.estado === 'Pendiente' || item.estado === 'pendiente'">{{item.estado}}</strong></li>
+    }   
 </ul>
+
+@for (item of prestamos; track item.id) {  
+    @switch (item.tipo) {
+        @case ('personal') {
+            <p>Prestamo de tipo Personal</p>
+        }
+        @case ('Hipotecario') {
+            <p>Prestamo para la compra de una casa</p>
+            <app-transacciones></app-transacciones>
+        }
+        @case ('Vehicular') {
+            <p>Prestamo para la compra de un vehiculo</p>
+        }
+        @default {
+            <p>Tipo de prestamo no reconocido</p>
+        }
+    }
+}
