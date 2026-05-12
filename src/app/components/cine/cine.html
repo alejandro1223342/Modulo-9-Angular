@@ -1,0 +1,8 @@
+<hr/>
+<h1>{{titulo}}</h1>
+
+<ol>
+    @for (pelicula of peliculas; track pelicula.id){
+        <li>{{pelicula.titulo}} - {{pelicula.director}} - {{pelicula.genero}} - {{pelicula.anio}} - {{pelicula.plataforma}} - {{pelicula.pago}}</li>
+    }
+</ol>

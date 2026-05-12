@@ -2,11 +2,11 @@ import { Component } from '@angular/core';
 import { Ventas } from '../ventas/ventas';
 import { Producto } from '../producto/producto';
 import { UpperCasePipe, LowerCasePipe, DatePipe, TitleCasePipe, JsonPipe, CurrencyPipe } from '@angular/common';
-import { CambiaLetras, cambiaLetrasASCII } from '../pipes/cambiaLetras';
+import { CambiaLetras, cambiaLetrasASCII } from '../../pipes/cambiaLetras';
 
 @Component({
   selector: 'app-usuario',
-  imports: [Ventas, Producto,CambiaLetras,cambiaLetrasASCII,UpperCasePipe, LowerCasePipe, DatePipe, TitleCasePipe, JsonPipe, CurrencyPipe],
+  imports: [Ventas, Producto, CambiaLetras, cambiaLetrasASCII, UpperCasePipe, LowerCasePipe, DatePipe, TitleCasePipe, JsonPipe, CurrencyPipe],
   templateUrl: './usuario.html',
   styleUrl: './usuario.css',
 })
