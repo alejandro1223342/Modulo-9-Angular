@@ -1,9 +1,22 @@
-<hr/>
+<hr />
 <h1>{{titulo}}</h1>
+
+<p>
+    Elige un color:
+    <input type="color" [(ngModel)]="color" />
+</p>
 
 <ol>
     @for (pelicula of peliculas; track pelicula.id){
-        <li>{{pelicula.titulo}} - {{pelicula.director}} - {{pelicula.genero}} - {{pelicula.anio}} - {{pelicula.plataforma}} - {{pelicula.pago}}</li>
+    <li>{{pelicula.titulo}} - {{pelicula.director}} -
+        <span [ngStyle]="{
+                'background': color,
+                
+            }">
+            {{pelicula.genero}}
+        </span>
+        - {{pelicula.anio}} - {{pelicula.plataforma}} - {{pelicula.pago}}
+    </li>
     }
 </ol>
 
@@ -22,7 +35,6 @@
 <h2>Listado de Peliculas Simple</h2>
 <ol>
     @for (pelicula of peliculasSinDatos; track pelicula){
-        <li>{{pelicula}}</li>
+    <li>{{pelicula}}</li>
     }
 </ol>
-
