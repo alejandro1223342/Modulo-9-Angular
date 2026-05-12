@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Transacciones } from '../transacciones/transacciones';
+import { Transacciones } from '../components/transacciones/transacciones';
 
 @Component({
   selector: 'app-prestamos',

@@ -7,10 +7,12 @@ import { Prestamos } from './prestamos/prestamos';
 import { Ventas } from './components/ventas/ventas';
 import { config } from './models/config';
 import { Cine } from './components/cine/cine';
+import { Transacciones } from './components/transacciones/transacciones';
+import { Cuentas } from './cuentas/cuentas';
 
 @Component({
   selector: 'app-root',
-  imports: [Cine],
+  imports: [Cuentas, Transacciones],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })

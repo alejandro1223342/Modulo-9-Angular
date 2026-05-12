@@ -1,1 +1,9 @@
-<h2>cuentas works!</h2>
+<h1>{{titulo}}</h1>
+<p>Saldo total: {{saldoTotal}}</p>
+
+
+<ul>
+    @for (cliente of clientes; track cliente.id){
+        <li>{{cliente.nombre}} - {{cliente.apellido}} - {{cliente.email}} - {{cliente.saldoCuenta}}</li>
+    }
+</ul>

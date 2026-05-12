@@ -1,0 +1,7 @@
+<h2>{{titulo}}</h2>
+
+<ul>
+    @for(transaccion of transaccionesList; track transaccion.id){
+        <li [class]="transaccion.tipo">{{transaccion.fecha | date:'mediumDate'}} - {{transaccion.description}} - {{transaccion.monto}} - {{transaccion.tipo}}</li>
+    }
+</ul>

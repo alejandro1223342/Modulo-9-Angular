@@ -1,12 +1,12 @@
 import { Component } from "@angular/core";
 import { Cuentas } from "../cuentas/cuentas";
-import { Transacciones } from "../transacciones/transacciones";
+import { Transacciones } from "../components/transacciones/transacciones";
 import { Prestamos } from "../prestamos/prestamos";
 
 @Component(
     {
         selector: "mi-perfil",
-        imports:[
+        imports: [
             Cuentas,
             Transacciones,
             Prestamos
@@ -20,12 +20,12 @@ import { Prestamos } from "../prestamos/prestamos";
 export class miPerfil {
     //Definicion de propiedades de la clase
     public nombre: string;
-    public edad: number;    
-    public ocupacion: string;   
-    public direccion: string;   
-    public telefono: number;   
-    
-    
+    public edad: number;
+    public ocupacion: string;
+    public direccion: string;
+    public telefono: number;
+
+
     constructor() {
         this.nombre = "Alejandro";
         this.edad = 25;
@@ -34,11 +34,11 @@ export class miPerfil {
         this.telefono = 123456789;
         console.log("Se cargó el componente de perfil correctamente.")
     }
-    
-    ngDoCheck(){
+
+    ngDoCheck() {
         console.log("Componente Actualizado Perfil");
     }
-    
+
     //Metodos de la clase
     cambiarEdad() {
         this.edad = 26;
@@ -46,5 +46,5 @@ export class miPerfil {
     cambiarDireccion() {
         this.direccion = "Calle Verdadera 456";
     }
-    
+
 }
