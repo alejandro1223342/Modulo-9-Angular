@@ -1,3 +1,15 @@
 <h1>Directivas en Angular</h1>
 
 <h2 [ngClass]="mostrar == 'si' ? 'resaltar' : 'destacarMenos' ">Soy un programador</h2>
+
+<h1>Directivas en Angular NGStylee</h1>
+
+<h2 [ngStyle]="mostrar == 'si' ? {'background-color': 'green'} : {'background-color': 'red'} ">Soy un estudiante</h2>
+
+<h1>Directivas en Angular NGStylee sin condiciones</h1>
+
+<p [ngStyle]="misEstilos">
+
+    Soy un programador con Angular
+
+</p>
