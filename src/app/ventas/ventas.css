@@ -1,0 +1,15 @@
+.resaltar {
+  background-color: yellow;
+  padding: 10px;
+  font-weight: bold;
+  font-style: italic;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.destacarMenos {
+  background-color: grey;
+  padding: 6px;
+  font-weight: bold;
+  font-style: oblique;
+  font-family: 'Courier New', Courier, monospace;
+}
