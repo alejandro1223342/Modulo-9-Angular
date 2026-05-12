@@ -6,3 +6,23 @@
         <li>{{pelicula.titulo}} - {{pelicula.director}} - {{pelicula.genero}} - {{pelicula.anio}} - {{pelicula.plataforma}} - {{pelicula.pago}}</li>
     }
 </ol>
+
+<h1>Formulario y two way data binding</h1>
+
+<input type="text" [(ngModel)]="mi_pelicula" />
+<button (click)="showPelicula()">Mostrar Pelicula</button>
+
+<button (click)="addPelicula()">Agregar Pelicula</button>
+
+<p>
+    La pelicula que quiero comprar es: <strong>{{ mi_pelicula }}</strong>
+</p>
+
+
+<h2>Listado de Peliculas Simple</h2>
+<ol>
+    @for (pelicula of peliculasSinDatos; track pelicula){
+        <li>{{pelicula}}</li>
+    }
+</ol>
+

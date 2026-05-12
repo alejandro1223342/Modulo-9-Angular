@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
 import { Pelicula } from '../../models/pelicula';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-cine',
-  imports: [],
+  imports: [FormsModule],
   templateUrl: './cine.html',
   styleUrl: './cine.css',
 })
@@ -13,6 +14,11 @@ export class Cine {
   public titulo: string;
 
   public peliculas: Array<Pelicula>;
+
+  //atributo para mostrar con twoway data binding y formularios
+  public mi_pelicula:string = "";
+
+  public peliculasSinDatos: string[] = [];
 
   constructor(){
     this.titulo = "Peliculas";
@@ -26,6 +32,20 @@ export class Cine {
   ngOnInit() {
     console.log(this.peliculas);
     this.peliculas[1].titulo = 'Spiderman';
+  }
+
+  ngDoCheck(){
+    console.log(this.mi_pelicula);
+  }
+
+  showPelicula(){
+    alert(this.mi_pelicula)
+  }
+
+  addPelicula(){
+    let identificador = this.peliculas.length + 1;
+    let nuevaPelicula = new Pelicula(identificador,this.mi_pelicula);
+    this.peliculas.push(nuevaPelicula)
   }
 
 }

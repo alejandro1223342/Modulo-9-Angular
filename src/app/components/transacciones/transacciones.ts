@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
 import { Transaccion } from '../../models/transaccion';
 import { DatePipe } from '@angular/common';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-transacciones',
-  imports: [DatePipe],
+  imports: [DatePipe, FormsModule],
   templateUrl: './transacciones.html',
   styleUrl: './transacciones.css',
 })
@@ -12,6 +13,8 @@ export class Transacciones {
 
   public titulo: string;
   public transaccionesList: Array<Transaccion>;
+  public descripcionTransaccion: string = "";
+
 
   constructor(){
     this.titulo = "Transacciones";
@@ -24,5 +27,9 @@ export class Transacciones {
       new Transaccion(6, new Date(), 'Transaccion 6', 600, 'egreso'),
       
     ];
+  }
+
+  showTransaccion(){
+    alert(this.descripcionTransaccion); 
   }
 }

@@ -1,7 +1,13 @@
 <h2>{{titulo}}</h2>
 
+<input type="text" [(ngModel)]="descripcionTransaccion"> 
+<button (click)="showTransaccion()">Mostrar Transacción</button>
+
+<p>Mi transacción es: <strong>{{ descripcionTransaccion }}</strong></p>
+
 <ul>
     @for(transaccion of transaccionesList; track transaccion.id){
         <li [class]="transaccion.tipo">{{transaccion.fecha | date:'mediumDate'}} - {{transaccion.description}} - {{transaccion.monto}} - {{transaccion.tipo}}</li>
     }
 </ul>
+
