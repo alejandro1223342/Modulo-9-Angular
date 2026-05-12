@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Transacciones } from '../components/transacciones/transacciones';
+import { Transacciones } from '../transacciones/transacciones';
 
 @Component({
   selector: 'app-prestamos',
@@ -40,5 +40,14 @@ export class Prestamos {
     } else {
       this.redirigir = false;
     }
+  }
+
+  eliminarPrestamo(index: number) {
+    this.prestamosList.splice(index, 1);
+  }
+
+  agregarPrestamo() {
+    let nuevoId = this.prestamosList.length > 0 ? Math.max(...this.prestamosList.map(p => p.id)) + 1 : 1;
+    this.prestamosList.push({ id: nuevoId, monto: 1500, estado: 'pendiente' });
   }
 }

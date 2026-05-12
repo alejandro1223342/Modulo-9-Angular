@@ -7,7 +7,7 @@
 </p>
 
 <ol>
-    @for (pelicula of peliculas; track pelicula.id){
+    @for (pelicula of peliculas; track pelicula.id; let indice = $index){
     <li>{{pelicula.titulo}} - {{pelicula.director}} -
         <span [ngStyle]="{
                 'background': color,
@@ -16,13 +16,15 @@
             {{pelicula.genero}}
         </span>
         - {{pelicula.anio}} - {{pelicula.plataforma}} - {{pelicula.pago}}
+
+        <button (click)="borrarPelicula(indice)">Borrar</button>
     </li>
     }
 </ol>
 
 <h1>Formulario y two way data binding</h1>
 
-<input type="text" [(ngModel)]="mi_pelicula" />
+<input type="text" [(ngModel)]="mi_pelicula" (focus)="haciendoFoco()" (blur)="haciendoBlur()" (keyup)="pulsandoTeclas($event)" />
 <button (click)="showPelicula()">Mostrar Pelicula</button>
 
 <button (click)="addPelicula()">Agregar Pelicula</button>

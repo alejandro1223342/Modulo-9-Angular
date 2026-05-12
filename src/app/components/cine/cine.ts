@@ -37,9 +37,9 @@ export class Cine {
     this.peliculas[1].titulo = 'Spiderman';
   }
 
-  ngDoCheck(){
+  /*ngDoCheck(){
     console.log(this.mi_pelicula);
-  }
+  }*/
 
   showPelicula(){
     alert(this.mi_pelicula)
@@ -49,6 +49,22 @@ export class Cine {
     let identificador = this.peliculas.length + 1;
     let nuevaPelicula = new Pelicula(identificador,this.mi_pelicula);
     this.peliculas.push(nuevaPelicula)
+  }
+
+  borrarPelicula(indice:number){
+    this.peliculas.splice(indice,1);
+  }
+
+  haciendoFoco(){
+    console.warn('El input esta recibiendo el foco');
+  }
+
+  haciendoBlur(){
+    console.warn('El input esta perdiendo el foco');
+  }
+
+  pulsandoTeclas(evento:KeyboardEvent){
+    console.warn('Estas pulsando una tecla',evento.key);
   }
 
 }

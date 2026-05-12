@@ -1,7 +1,7 @@
 import { Component } from "@angular/core";
 import { Cuentas } from "../cuentas/cuentas";
 import { Transacciones } from "../components/transacciones/transacciones";
-import { Prestamos } from "../prestamos/prestamos";
+import { Prestamos } from "../components/prestamos/prestamos";
 
 @Component(
     {
