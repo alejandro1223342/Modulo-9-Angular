@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
 import { Ventas } from '../ventas/ventas';
 import { Producto } from '../producto/producto';
+import { UpperCasePipe, LowerCasePipe, DatePipe, TitleCasePipe, JsonPipe, CurrencyPipe } from '@angular/common';
 
 @Component({
   selector: 'app-usuario',
-  imports: [Ventas, Producto],
+  imports: [Ventas, Producto, UpperCasePipe, LowerCasePipe, DatePipe, TitleCasePipe, JsonPipe, CurrencyPipe],
   templateUrl: './usuario.html',
   styleUrl: './usuario.css',
 })
@@ -33,6 +34,9 @@ export class Usuario {
     nick: "AleX",
     rol: "Admin"
   }
+
+  fechaActual = new Date();
+  precio = 2549.99;
 
   ngOnInit() {
     this.marcasAutos = []

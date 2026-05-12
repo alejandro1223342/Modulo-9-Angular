@@ -66,3 +66,19 @@
 
 {{saludo}}
 
+<h2>Tuberias en Angular</h2>
+
+{{web | uppercase }}
+{{web | lowercase }}
+{{web | titlecase }}
+
+<br/>
+
+<!-- JsonPipe: Convierte un objeto o valor de TypeScript a una cadena de texto en formato JSON. Es muy útil para hacer debug (depurar) y ver el estado de los objetos y arreglos directamente en el HTML. -->
+<p><b>JsonPipe:</b> {{ usuario | json }}</p>
+
+<!-- DatePipe: Formatea un valor de fecha u hora (como un objeto Date o un número de milisegundos) de acuerdo a las reglas de formato elegidas (como 'medium', 'short', o formatos custom como 'dd/MM/yyyy'). -->
+<p><b>DatePipe:</b> {{ fechaActual | date:'medium' }}</p>
+
+<!-- CurrencyPipe: Transforma un número en una cadena formateada como moneda, añadiendo el símbolo (ej. USD, EUR) y ajustando los decimales según la configuración regional. -->
+<p><b>CurrencyPipe:</b> {{ precio | currency:'USD' }}</p>
