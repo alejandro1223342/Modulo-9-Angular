@@ -24,7 +24,8 @@ export class miPerfil {
     public ocupacion: string;
     public direccion: string;
     public telefono: number;
-
+    public nombreCliente: string = "Juan Pérez";
+    public mensajeRecibido: string = "";
 
     constructor() {
         this.nombre = "Alejandro";
@@ -45,6 +46,10 @@ export class miPerfil {
     }
     cambiarDireccion() {
         this.direccion = "Calle Verdadera 456";
+    }
+
+    recibirMensaje(mensaje: string) {
+        this.mensajeRecibido = mensaje;
     }
 
 }

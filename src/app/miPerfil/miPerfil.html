@@ -8,6 +8,7 @@
 <button (click)="cambiarEdad()">Cambio de edad</button>
 <button (click)="cambiarDireccion()">Cambio de direccion</button>
 <br>
-<app-cuentas></app-cuentas>
-<app-transacciones></app-transacciones>
+<app-cuentas [nombreCliente]="nombreCliente"></app-cuentas>
+<app-transacciones (mensajeEnviado)="recibirMensaje($event)"></app-transacciones>
+<p>Mensaje recibido: {{ mensajeRecibido }}</p>
 <app-prestamos></app-prestamos>

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Output, EventEmitter } from '@angular/core';
 import { Transaccion } from '../../models/transaccion';
 import { DatePipe } from '@angular/common';
 import { FormsModule } from '@angular/forms';
@@ -10,6 +10,8 @@ import { FormsModule } from '@angular/forms';
   styleUrl: './transacciones.css',
 })
 export class Transacciones {
+
+  @Output() mensajeEnviado = new EventEmitter<string>();
 
   public titulo: string;
   public transaccionesList: Array<Transaccion>;
@@ -31,5 +33,9 @@ export class Transacciones {
 
   showTransaccion(){
     alert(this.descripcionTransaccion); 
+  }
+
+  enviarSaludo() {
+    this.mensajeEnviado.emit("Hola desde Transacciones!");
   }
 }

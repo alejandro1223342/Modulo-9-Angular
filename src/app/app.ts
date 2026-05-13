@@ -9,10 +9,11 @@ import { config } from './models/config';
 import { Cine } from './components/cine/cine';
 import { Transacciones } from './components/transacciones/transacciones';
 import { Cuentas } from './cuentas/cuentas';
+import { Padre } from './components/padre/padre';
 
 @Component({
   selector: 'app-root',
-  imports: [Cine, Transacciones, Prestamos],
+  imports: [Cine, Transacciones, Prestamos,Padre,Cuentas,miPerfil],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })

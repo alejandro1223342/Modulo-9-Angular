@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { Cliente } from '../models/cliente';
 
 @Component({
@@ -8,6 +8,8 @@ import { Cliente } from '../models/cliente';
   styleUrl: './cuentas.css',
 })
 export class Cuentas {
+
+  @Input() nombreCliente: string = "";
 
   public titulo: string;
   public clientes: Array<Cliente>;
