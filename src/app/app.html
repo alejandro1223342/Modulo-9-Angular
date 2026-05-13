@@ -2,14 +2,14 @@
 <h2>{{descripcion}}</h2>
 
 <!--<mi-producto></mi-producto>-->
-<mi-perfil></mi-perfil>
-
+<!-- <mi-perfil></mi-perfil>
+ -->
 <!--<app-usuario></app-usuario>
 <app-prestamos></app-prestamos>-->
 
 <!--<app-ventas></app-ventas>-->
 
-<app-cine></app-cine>
+<!-- <app-cine></app-cine>
 
 <hr />
 
@@ -26,4 +26,17 @@
 
 <app-cuentas></app-cuentas>
 <hr/>
-<app-transacciones></app-transacciones>
+<app-transacciones></app-transacciones> -->
+
+<nav>
+    <a routerLink="/inicio" routerLinkActive="activo">Inicio</a>
+    <a routerLink="/cuenta" routerLinkActive="activo">Cuenta</a>
+    <a routerLink="/transacciones" routerLinkActive="activo">Transacciones</a>
+    <a routerLink="/prestamos" routerLinkActive="activo">Préstamos</a>
+</nav>
+
+<hr/>
+
+<router-outlet>
+    <!-- Aqui va el componente vinculado a la ruto actual -->
+</router-outlet>
